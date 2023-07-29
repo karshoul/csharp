@@ -11,7 +11,7 @@ namespace CS_hello_world
         static void Main(string[] args)
         {
             // Đây là nội dung in ra màn hình
-            Console.WriteLine("Xin chao C#!");
+            Console.WriteLine("Xin chao");
             Console.Read();
         }
 
