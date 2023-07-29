@@ -1,0 +1,15 @@
+D:\Projects\dotnet\CS_hello_world\bin\Releas\net7.0\CS_hello_world.exe
+D:\Projects\dotnet\CS_hello_world\bin\Releas\net7.0\CS_hello_world.deps.json
+D:\Projects\dotnet\CS_hello_world\bin\Releas\net7.0\CS_hello_world.runtimeconfig.json
+D:\Projects\dotnet\CS_hello_world\bin\Releas\net7.0\CS_hello_world.dll
+D:\Projects\dotnet\CS_hello_world\bin\Releas\net7.0\CS_hello_world.pdb
+D:\Projects\dotnet\CS_hello_world\obj\Releas\net7.0\CS_hello_world.csproj.AssemblyReference.cache
+D:\Projects\dotnet\CS_hello_world\obj\Releas\net7.0\CS_hello_world.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\dotnet\CS_hello_world\obj\Releas\net7.0\CS_hello_world.AssemblyInfoInputs.cache
+D:\Projects\dotnet\CS_hello_world\obj\Releas\net7.0\CS_hello_world.AssemblyInfo.cs
+D:\Projects\dotnet\CS_hello_world\obj\Releas\net7.0\CS_hello_world.csproj.CoreCompileInputs.cache
+D:\Projects\dotnet\CS_hello_world\obj\Releas\net7.0\CS_hello_world.dll
+D:\Projects\dotnet\CS_hello_world\obj\Releas\net7.0\refint\CS_hello_world.dll
+D:\Projects\dotnet\CS_hello_world\obj\Releas\net7.0\CS_hello_world.pdb
+D:\Projects\dotnet\CS_hello_world\obj\Releas\net7.0\CS_hello_world.genruntimeconfig.cache
+D:\Projects\dotnet\CS_hello_world\obj\Releas\net7.0\ref\CS_hello_world.dll

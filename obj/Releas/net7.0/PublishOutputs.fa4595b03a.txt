@@ -1,0 +1,5 @@
+D:\Projects\dotnet\CS_hello_world\bin\Releas\net7.0\publish\CS_hello_world.exe
+D:\Projects\dotnet\CS_hello_world\bin\Releas\net7.0\publish\CS_hello_world.dll
+D:\Projects\dotnet\CS_hello_world\bin\Releas\net7.0\publish\CS_hello_world.deps.json
+D:\Projects\dotnet\CS_hello_world\bin\Releas\net7.0\publish\CS_hello_world.runtimeconfig.json
+D:\Projects\dotnet\CS_hello_world\bin\Releas\net7.0\publish\CS_hello_world.pdb
