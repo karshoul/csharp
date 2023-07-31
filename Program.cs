@@ -10,20 +10,31 @@ namespace CS_hello_world
         */
         static void Main(string[] args)
         {
-            // Đây là nội dung in ra màn hình
-            Console.WriteLine("Xin chao C#!");
-            Console.Read();
-        }
+            // + - * / %
+            // float a = 5;
+            // int b = 4;
+            // float kq = 6 / (2+3) * 2; 
 
-        /// <summary>
-        /// Phương thức trả về tổng của hai số nguyên
-        /// </summary>
-        /// <param name="a"> số nguyên 1 </param>
-        /// <param name="b"> số nguyên 2 </param>
-        /// <returns> Tổng a + b </returns>
-        static int Tong(int a, int b) 
-        {
-            return ( a + b );
+            // Console.WriteLine(kq);
+
+            // Console.WriteLine("a + b = {0}",a+b);
+            // Console.WriteLine("a - b = {0}",a-b);
+            // Console.WriteLine("a * b = {0}",a*b);
+            // Console.WriteLine("a / b = {0}",a/b);
+            // Console.WriteLine("a % b = {0}",a%b);
+
+            // Toán tử Gán: = ; += ; -= ; /= ; %= \ ++ --
+            // += : cộng thêm một giá trị bất kì vào biến
+            // ++ : cộng thêm một giá trị, -- tương tự vậy (++x ưu tiên trước; x++ ưu tiên sau)
+            // -= : trừ bớt đi giá trị 
+            // Còn lại tương tụ vậy
+            int x;
+            x = 10;
+
+            int z = 2 * ++x;
+            Console.WriteLine(x);
+            Console.WriteLine(z);
+
         }
     }
 }
