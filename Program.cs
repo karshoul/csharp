@@ -10,30 +10,28 @@ namespace CS_hello_world
         */
         static void Main(string[] args)
         {
-            // + - * / %
-            // float a = 5;
-            // int b = 4;
-            // float kq = 6 / (2+3) * 2; 
+            bool kq;
+            // Toán tử so sánh: == ; > ; < ; >= ; <= ; !=
 
-            // Console.WriteLine(kq);
+            // int a = 5;
+            // int b = 6;
 
-            // Console.WriteLine("a + b = {0}",a+b);
-            // Console.WriteLine("a - b = {0}",a-b);
-            // Console.WriteLine("a * b = {0}",a*b);
-            // Console.WriteLine("a / b = {0}",a/b);
-            // Console.WriteLine("a % b = {0}",a%b);
+            // kq = a == b;
 
-            // Toán tử Gán: = ; += ; -= ; /= ; %= \ ++ --
-            // += : cộng thêm một giá trị bất kì vào biến
-            // ++ : cộng thêm một giá trị, -- tương tự vậy (++x ưu tiên trước; x++ ưu tiên sau)
-            // -= : trừ bớt đi giá trị 
-            // Còn lại tương tụ vậy
-            int x;
-            x = 10;
+            // Console.WriteLine("a == b = {0}",kq);
+            // // $ chèn vào để có thể thêm biểu thức vào câu lệnh
+            // Console.WriteLine($"a != b = {a != b}");
+            // Console.WriteLine($"a > b = {a > b}");
+            // Console.WriteLine($"a >= b = {a >= b}");
+            // Console.WriteLine($"a < b = {a < b}");
+            // Console.WriteLine($"a <= b = {a <= b}");
 
-            int z = 2 * ++x;
-            Console.WriteLine(x);
-            Console.WriteLine(z);
+            // Toán tử logic: && || !
+            bool a = false;
+            bool b = false;
+            kq = a || b;
+
+            Console.WriteLine(kq);  
 
         }
     }
