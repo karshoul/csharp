@@ -4,117 +4,118 @@ using System.Linq;
 namespace CS_hello_world
 {
     class Program
-    {
-        /*
-            Đây là hàm Main
-            Điểm chạy chương trình
-        */
-        static void Main(string[] args)
-        {   
-            // string sinhvien1 = "Nguyen Van A";
-            // string sinhvien2 = "Nguyen Van B";
-            // string sinhvien3 = "Nguyen Van C";
-
-            // Console.WriteLine(sinhvien1);
-            // Console.WriteLine(sinhvien2);
-            // Console.WriteLine(sinhvien3); 
-
-            // string[] ds;
-            // ds = new string[3];
-
-            // ds[0] = "Nguyen Van A";
-            // ds[1] = "Nguyen Van B";
-            // ds[2] = "Nguyen Van C"; 
-
-            // for (int i = 0; i <= 2; i++)
-            // {
-            //     Console.WriteLine(ds[i]);
-            // }
-
-            // --------------KHAI BAO MANG TRONG C#--------------
-
-            // int[] mangsonguyen;
-            // string[] mangkieuchuoi = new string[2] {"Dien thoai", "May tinh"};
-            // double[] mang2 = {0.1, 0.5, 20, 40};
-            
-            // // Viet gon
-            // mangsonguyen = new int[3] {1, 2, 0};
-
-            // // mangsonguyen[0] = 1;
-            // // mangsonguyen[1] = 2;
-            // // mangsonguyen[2] = 5;
-
-            // for (int i = 0; i <= 2; i++)
-            // {
-            //     Console.WriteLine(mangsonguyen[i]);
-            // }
-
-            // -----------DUYET QUA PHAN TU MANG-----------
-
-            // -----------MANG MOT CHIEU------------------
-            // int[] numbers = {1 ,4, 7,4, 3, 7, 34, 7};
-
-              //Duyet tu duoi len 
-            //   int sophantu =  numbers.Length;
-            //   for (int chiso = sophantu - 1; chiso >= 0; chiso--)
-            //   {
-            //         Console.WriteLine(numbers[chiso]);
-            //   }
-
-               //Duyet tu tren xuong
-            //    int sophantu =  numbers.Length;
-            //   for (int chiso = 0; chiso < sophantu; chiso++)
-            //   {
-            //         Console.WriteLine(numbers[chiso]);
-            //   }
-
-            // foreach (var abc in numbers)
-            // {
-            //     Console.WriteLine(abc);
-            // }
-
-            // Console.WriteLine($"So phan tu {numbers.Length}");
-            // Console.WriteLine($"Chieu: {numbers.Rank}");
-
-            // Console.WriteLine($"Min: {numbers.Min()}");
-            // Console.WriteLine($"Max: {numbers.Max()}");   
-
-            // Console.WriteLine($"Tong: {numbers.Sum()}");
-            
-            // ----------SAP XEP MANG MOT CHIEU TANG DAN------------
-            // Array.Sort(numbers);
-            // foreach (var item in numbers)
-            // {
-            //     Console.WriteLine(item);
-            // }
-
-            // -----------MANG HAI CHIEU TRONG C#--------------
-
-            /*
-                     0 1 2 
-
-               0     2 3 4.5
-               1     1 9 8 
-
-               [o,1]
-               [1,2]
-            */
-
-            double[,] numbers = new double[2, 3] {{2, 3, 4.5}, {1, 9, 8}};
-
-            int hang = 2;
-            int cot = 3;
-
-            for (int i = 0; i < hang; i++)
-            {
-                for (int j = 0; j < cot; j++)
+    {   
+            /*--------Cú pháp khai báo một phương thức cơ bản---------
+                    <Access Modifiers> <return type> <name_method>(<parameters>)
                 {
-                    Console.Write(numbers[i,j]);
-                    Console.Write(" ");
+                    // Các câu lệnh trong phương thức
                 }
+            */
+        
+            // Đây là hàm Main
+            // Điểm chạy chương trình
 
-                Console.WriteLine();
-            }
-        } 
+        // public static int tich(int a, int b)
+        // {
+        //     int result;
+        //     result = a * b;
+        //     return result;
+        // }    
+        
+        // public static void Main(string[] args)
+        // {   
+            // cách gọi phương thức
+            // có thể bỏ bớt khi cùng namespace, cùng lớp: xinchao();
+            // int kq;
+            // xinchao();
+            // kq = tich(3,4);
+           
+
+            // Console.WriteLine(kq);
+
+            // ---------VD------------
+
+            // int x = 234;
+            // int y = 456;
+            // var result = Tinhtoan.tong(x, y);
+            // Console.WriteLine(result);
+
+            // float a = 12.12f;
+            // float b = 10.0f;
+            
+            // var  result1 = Tinhtoan.tong(a, b);
+            // Console.WriteLine(result1);
+
+            // Truyền tham số với tên trong phương thức
+
+            // xinchao("A", "Nguyen");
+            // xinchao(ho: "Pham van", ten:"B");
+
+            // Tham số giá trị mặc định
+            // xinchao("x");
+            // xinchao("X", "Pham");
+        // }
+        // --------Truyền tham số với tên trong phương thức--------------- 
+        // static void xinchao(string ten, string ho)
+        // {
+        //     string fullname;
+        //     fullname = ho + " " + ten;
+
+        //     Console.WriteLine($"Xin chào {fullname}");
+        // }
+
+
+        // Tham số giá trị mặc định
+        // static void xinchao(string ten, string ho = "Nguyen")
+        // {
+        //     string fullname;
+        //     fullname = ho + " " + ten;
+
+        //     Console.WriteLine($"Xin chào {fullname}");
+        // }
+
+        // public static void Main(string[] args)
+        // {
+        //     int a = 2;
+        //     binhphuong(ref a);
+        //     binhphuong(ref a);
+        //     binhphuong(ref a);
+
+        //     Console.WriteLine(a);
+        // }
+
+        // static void binhphuong(ref int x)
+        // {
+        //     x = x * x;
+        //     Console.WriteLine(x);
+        // }
+
+        class Count {
+            public int c = 1;
+        }
+
+        public static void Main(string[] args)
+        {
+            // int a;
+            // binhphuong(4, out a);
+
+            // Console.WriteLine(a);
+
+            Count count = new Count();
+            Console.WriteLine(count.c);
+
+            dem(count);
+            Console.WriteLine(count.c);
+        }
+
+        static void dem(Count count)
+        {
+            count.c ++;
+        }
+
+        // static void binhphuong(int x, out int kq) 
+        // {
+        //    kq = x * x;
+        // }
     }
 }
