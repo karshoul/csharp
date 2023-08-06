@@ -8,7 +8,8 @@ namespace CS_hello_world
      // khai báo các thành viên  hàm (phương thức)
     }   
     */
-    class Vukhi { 
+    class Vukhi
+    {
 
         // DỮ LIỆU
         public string name = "Ten vu khi";
@@ -16,16 +17,19 @@ namespace CS_hello_world
 
         // THUỘC TÍNH
 
-        public string Noisanxuat {set; get;}
-        public int Satthuong{
+        public string Noisanxuat { set; get; }
+        public int Satthuong
+        {
             // Được thi hành khi thực hiện phép gán " = "
-            set {
-            // Các lệnh
-            dosatthuong = value;
+            set
+            {
+                // Các lệnh
+                dosatthuong = value;
             }
 
             // Được thi hành khi truy cập, phải trả về giá trị cùng kiểu với THUỘC TÍNH
-            get {
+            get
+            {
                 return dosatthuong;
             }
         }
@@ -33,12 +37,12 @@ namespace CS_hello_world
 
         // Phương thức khởi tạo
         public Vukhi()
-        {   
+        {
             dosatthuong = 1;
         }
 
-         public Vukhi(string name, int _dosatthuong)
-        {   
+        public Vukhi(string name, int _dosatthuong) // overload method
+        {
             dosatthuong = _dosatthuong;
             this.name = name;
         }
@@ -54,12 +58,12 @@ namespace CS_hello_world
             // abc = this;
         }
 
-        public void Tancong() 
+        public void Tancong()
         {
             Console.Write(name + ":\t");
             for (int i = 0; i < dosatthuong; i++)
             {
-                Console.Write(" * "); 
+                Console.Write(" * ");
             }
             Console.WriteLine();
         }
