@@ -61,13 +61,13 @@ namespace CS_hello_world
 
             // Console.WriteLine(thongbao);
 
-            string thongbao = "Khuong Nguyen, xin chao cac ban!";
-            int dodai = thongbao.Length; // Đếm bao nhiêu ký tự
+            // string thongbao = "Khuong Nguyen, xin chao cac ban!";
+            // int dodai = thongbao.Length; // Đếm bao nhiêu ký tự
             //Để đọc một ký tự nào đó trong chuỗi ta sử dụng ngoặc vuông
             // char kytu = thongbao[4];
 
 
-            Console.WriteLine(thongbao);
+            // Console.WriteLine(thongbao);
             // Console.WriteLine(dodai);
             // Console.WriteLine(kytu);
 
@@ -77,10 +77,31 @@ namespace CS_hello_world
             //     Console.WriteLine($"Chi so {i} la ky tu: {kytu, 3}");
             // }
 
-            foreach (var kytu in thongbao)
-            {
-                Console.WriteLine(kytu);
-            }
+
+            // Duyệt qua từng ký tự 
+            // foreach (var kytu in thongbao)
+            // {
+            //     Console.WriteLine(kytu);
+            // }
+
+            // Nội dung người dùng nhập vào ta có thể bỏ bằng cách sau
+            // string thongbao = "         Khuong Nguyen, xin chao cac ban!        ";
+            // thongbao = thongbao.Trim();// xóa khoảng trống
+
+            //Muốn cắt đi cụ thể những ký nào ở đầu và ở cuối thì ta sẽ điền ký tự đó vào (đc kí hiệu bằng dấu '')
+            //Muốn loại bỏ những ký tự đặc biết ở đầu hoặc ở cuối thôi ta dùng TrimStart or TrimEnd 
+            //Để chuyển toàn bộ chuỗi thành chữ in thường hoặc thành chữ in hoa: 
+            // In hoa: ToUpper()
+            // In thường: ToLower()
+            // string thongbao = "Khuong Nguyen, xin chao cac ban!        ";
+            // thongbao = thongbao.Trim();
+            // Console.WriteLine(thongbao.ToLower());
+
+            // TÌM KIẾM VÀ THAY THẾ MỘT CHUỖI CON Ở TRONG CHUỖI
+            string thongbao = "Khuong Nguyen, xin chao cac ban!        ";
+            thongbao = thongbao.Replace("xin chao", "chao mung");
+            Console.WriteLine(thongbao.ToLower());
+
         }
     }
 }
