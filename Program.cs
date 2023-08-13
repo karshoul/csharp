@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.Text;
 
 namespace CS_hello_world
 {
@@ -97,10 +98,67 @@ namespace CS_hello_world
             // thongbao = thongbao.Trim();
             // Console.WriteLine(thongbao.ToLower());
 
-            // TÌM KIẾM VÀ THAY THẾ MỘT CHUỖI CON Ở TRONG CHUỖI
-            string thongbao = "Khuong Nguyen, xin chao cac ban!        ";
-            thongbao = thongbao.Replace("xin chao", "chao mung");
-            Console.WriteLine(thongbao.ToLower());
+            // TÌM KIẾM VÀ THAY THẾ MỘT CHUỖI CON Ở TRONG CHUỖI: REPLACE
+            // string thongbao = "Khuong Nguyen, xin chao cac ban!        ";
+            // thongbao = thongbao.Replace("xin chao", "chao mung");
+            // Console.WriteLine(thongbao);
+
+            //CHÈN VÀO CHUỖI MỘT CHUỖI CON KHÁC: INSERT
+            // string thongbao = "Khuong Nguyen, xin chao cac ban!        ";
+            // thongbao = thongbao.Insert(0, " 2020"); // Insert(0): 0 là vị trí cần thay thế
+            // Console.WriteLine(thongbao);
+
+            // LẤY RA MỘT CHUỖI CON TRONG CHUỖI BAN ĐẦU: SUBSTRING
+            // string thongbao = "Khuong Nguyen, xin chao cac ban!";
+            // thongbao = thongbao.Substring(15, 8); // 3 là số ký tự cần lấy
+            // Console.WriteLine(thongbao);
+
+            // XÓA ĐI CHUỖI CON TRONG CHUỖI BAN ĐẦU
+            // string thongbao = "Khuong Nguyen, xin chao cac ban!";
+            // thongbao = thongbao.Remove(13, 4); // 4 là số ký tự cần xóa
+            // Console.WriteLine(thongbao);
+
+            // NGẮT CHUỖI THÀNH MẢNG CHUỖI: SPLIT
+            // string thongbao = "Khuong Nguyen, xin chao cac ban!";
+            // string[] cacchuoicon =  thongbao.Split(' ');
+            // foreach (var s in cacchuoicon)
+            // {
+            //     Console.WriteLine(s);
+            // }
+
+            // Console.WriteLine(thongbao);
+
+            // NỐI MẢNG CHUỖI CON THÀNH MỘT CHUỖI DÀI: JOIN
+            // string thongbao = "Khuongnguyen, xin chao cac ban!";
+            // string[] cacchuoicon = {
+            //     "Hoc",
+            //     "Lap",
+            //     "Trinh",
+            //     "C#"
+            // }; 
+            // thongbao = string.Join('.', cacchuoicon);
+
+            // Console.WriteLine(thongbao);
+
+            // LỚP STRINGBUILDER - XÂY DỰNG CHUỖI
+            //ko dùng stringbuilder
+            string thongbao1;
+            thongbao1 = "Xin";
+            thongbao1 += "Chao cac ban";
+            thongbao1 = thongbao1.Replace("Xin chao", "Chao mung");
+
+            //dùng stringbuilder    
+            StringBuilder thongbao = new StringBuilder();
+            thongbao.Append("Xin");
+            thongbao.Append(" Chao cac ban");
+            thongbao.Replace("Xin chao", "Chao mung");
+
+            string kq = thongbao.ToString();
+
+            Console.WriteLine(kq);
+
+
+
 
         }
     }
