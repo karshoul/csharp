@@ -1,116 +1,112 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
-namespace generic_example
+namespace Anonymous_example
 {
     class Program
     {
-        /*
-            Đây là hàm Main
-            Điểm chạy chương trình
-        */
-        /* Để chuyển tham số trong phương thức này thành dạng tham chiếu
-        qua đó chúng ta thay đổi giá trị của tham số thì tương đương thay đổi giá trị 
-        của biến chuyển vào, ta sử dụng từ khóa "ref" */
-        // static void Swap(ref int x, ref int y) /* Trong phương thức này ta xây dựng giải thuật để x nhận giá trị của y
-        //                                           y thì nhận giá trị của x */
-        // {
-        //     int t; // dùng biến tạm để lưu giá trị của x 
-        //     t = x;
-        //     x = y; // lúc này giá trị của x sẽ đc thay thế bằng y nên ta sẽ dùng biến tạm
-        //     y = t;
-        // }
+        //Anonymous - kiểu dữ liệu vô danh
+        /* Objects (đối tượng) bên trong nó chứa những thuộc tính, trường dữ liệu - chỉ dùng dữ liệu để đọc
+        - Để tạo ra một đối tượng kiểu vô danh ta sử dụng toán tử new:
+        new {thuoctinh = giatri, thuoctinh2 = giatri2}
+        -Đối tượng kiểu vô danh này bên trong nó có các thuộc tính, mỗi thuộc tính này đang chứa những giá trị và chúng ta
+        chỉ có thể đọc những giá trị này ra mà không thể gán vào  */
+    //     class Sinhvien {
+    //         // Thuộc tính
+    //         public string HoTen {set; get;}
 
-        // static void Swap<T>(ref float x, ref float  y)
-        // {
-        //     float t; // dùng biến tạm để lưu giá trị của x 
-        //     t = x;
-        //     x = y; // lúc này giá trị của x sẽ đc thay thế bằng y nên ta sẽ dùng biến tạm
-        //     y = t;
-        // }
-        // static void Main(string[] args)
-        // {
-        //     int a = 5;
-        //     int b = 45;
+    //         public int Namsinh {set; get;}
 
-        //     float c = 5;
-        //     float d = 1;
+    //         public string Noisinh {set; get;}
+    //     }
+    //    static void Main(string[] args)
+    //    {
+    //     /* 
+    //     - Thông thường những đối tượng kiểu vô danh sẽ lưu vào những biến ngầm định bằng từ khóa var
+    //     - Không được gán giá trị vào kiểu vô danh
+    //     */
 
-        //     Console.WriteLine($"a = {a}, b = {b}");
-        //     Swap(ref a, ref b); // Phương thức đổi số a thành b và ngược lại (Chỉ nhận 2 phương thức kiểu int), nếu tham số kiểu float nó sẽ gọi kiểu float
-        //     Console.WriteLine($"a = {a}, b = {b}");
+    //     //Tạo đối tượng vô danh trong truy vấn Linq
 
-        //     Console.WriteLine($"c = {c}, d = {d}");
-        //     Swap(ref c, ref d);
-        //     Console.WriteLine($"c = {c}, d = {d}");
+    //     List<Sinhvien> cacsinhvien = new List<Sinhvien>() {
+    //         new Sinhvien() {HoTen = "Nam", Namsinh = 2000, Noisinh = "Binh Duong"},
+    //         new Sinhvien() {HoTen = "Dan", Namsinh = 2002, Noisinh = "Nam Dinh"},
+    //         new Sinhvien() {HoTen = "Long", Namsinh = 2001, Noisinh = "Vinh Phuc"},
+    //         new Sinhvien() {HoTen = "Minh", Namsinh = 2000, Noisinh = "Nam Dinh"},
+    //     };
 
+    //     // var ketqua = from sv in cacsinhvien
+    //     //              where sv.Namsinh <= 2001
+    //     //              select new { //Dữ liệu trả về
+    //     //                 Ten = sv.HoTen,
+    //     //                 NS = sv.Noisinh
+    //     //              }; 
 
-        // ---------------KHAI BÁO VÀ SỬ DỤNG GENERIC TRONG PHƯƠNG THỨC---------------
-        // static void Swap<T>(ref T x, ref T y) 
-        // /* Trong phương thức này ta xây dựng giải thuật để x nhận giá trị của y
-        // y thì nhận giá trị của x
-        // - T là kiểu dữ liệu 
-        // - Khi áp dụng ta sẽ chỉ rõ T là biến kiểu gì, có thể là int, string, float,... */
-        // {
-        //     T t; // dùng biến tạm để lưu giá trị của x 
-        //     t = x;
-        //     x = y; // lúc này giá trị của x sẽ đc thay thế bằng y nên ta sẽ dùng biến tạm
-        //     y = t;
-        // }
+    //     var ketqua = from sv in cacsinhvien
+    //                  where sv.HoTen.Contains("a")
+    //                  select new { //Dữ liệu trả về
+    //                     Ten = sv.HoTen,
+    //                     NS = sv.Noisinh
+    //                  }; 
 
+    //     foreach (var Sinhvien in ketqua)
+    //     {
+    //         Console.WriteLine(Sinhvien.Ten + " - " + Sinhvien.NS);
+    //     }
+
+    //    }
+
+    //-----------KIỂU DỮ LIỆU ĐỘNG DYNAMIC----------------
+    // class Student {
+    //     public string Name {set; get;} // Thuộc tính
+    //     public void Hello() => Console.WriteLine(Name);
+    // }
+    // static void PrintInfo(dynamic obj) 
+    // /* Do kiểu dynamic nên là biến này có thể có những thuộc tính, có những phương thức mà những thuộc tính phương thức ấy
+    // phải xác định ở thời điểm thực thi nên ở thời điểm biên dịch tức là thời điểm viết code ta có thể truy cập
+    // được những phương thức, những thuộc tính bất kì mà không gây ra lỗi nào đó */
+    // {   
         
-        // static void Main(string[] args)
-        // {
-        //     double a = 45;
-        //     double b = 1;
+    //     obj.Name = "Khuong Nguyen"; //Thuộc tính
+    //     obj.Hello(); // Phương thức 
+    // }
+    // static void Main(string[] args)
+    // {
+        // KHi khai báo biến không nhất thiết phải gán ngay giá trị cho nó
+        /* Biến dynamic này có thể được gán bởi bất kì đối tượng nào và kiểu thực sự của dynamic
+        được xác định ở thời điểm thực thi tức là thời điểm chạy chương trình */ 
+        // dynamic tenbien1;
+        /* Khi khai báo bằng từ khóa var đó là kiểu ngầm định thì chúng ta bắt buộc phải
+        khởi tạo ngay giá trị cho nó và khi khởi tạo giá trị cho nó thì căn cứ vào giá trị được gán thì nó
+        xác định cái kiểu của cái biến ngầm định này là kiểu gì */
+        // var tenbien2 = 123;   
 
-        //     Console.WriteLine($"a = {a}, b = {b}");
-        //     //Swap(ref a, ref b); // Phương thức đổi số a thành b và ngược lại (Chỉ nhận 2 phương thức kiểu int), nếu tham số kiểu float nó sẽ gọi kiểu float
-            
-        //     /* Trong trường hợp ta muốn tường minh chỉ rõ kiểu đại diện của phương thức Swap khi áp dụng 
-        //     nó là kiểu gì thì ta viết như sau 
-        //     - Khi chúng ta chỉ rõ kiểu generic trước thì các tham số truyền vào sau đó phải đúng kiểu đó*/
-        //     Swap<double>(ref a, ref b);
-        //     Console.WriteLine($"a = {a}, b = {b}");
 
-        //-----------------------SỬ DỤNG GENERIC TRONG LỚP-------------
-        class Product<A> 
-        {
-            //dữ liệu
-            A ID;
+        // Student abc = new Student();
+        // PrintInfo(abc);
 
-            //Phương thức
-            public void SetID(A _id) // Dùng để thiết lập ID của sản phẩm
-            {
-                // Phương thức này để thiết lập ID của sản phẩm bằng ID chúng ta truyền vào
-                this.ID = _id;
-            }
-
-            public void PrintInf()
-            {
-                Console.WriteLine($"ID = {this.ID}");
-            }
-        }
+        //-------------TỔNG KẾT LẠI------------
         static void Main(string[] args)
         {
-            // Product<int> sanpham1 = new Product<int>();
-            // sanpham1.SetID(123);
-            // sanpham1.PrintInf();
+            // Cách khai báo
+            dynamic tenbien; 
 
-            // Product<string> sanpham2 = new Product<string>();
-            // sanpham2.SetID("Dienthoai");
-            // sanpham2.PrintInf();
+            /* Biến kiểu dynamic này có thể được gán bằng một đối tượng bất kì từ số nguyên hay chuỗi hoặc bằng
+            bất kì đối tượng nào đó */
+            tenbien = 1;
+            tenbien = "fgksl";
+            tenbien = new {};
 
-            List<int> list1 = new List<int>();
-            List<string> list2 = new List<string>();
+            /* Ở thời điểm viết code biến kiểu dynamic thì không xác định kiểu cụ thể do đó chúng ta có thể
+            thoải mái truy cập những phương thức, những thuộc tính
+            - Những phương thức, những thuộc tính này xác định có hay không thì nó sẽ xác định ở thời điểm thực thi
+            hay biên dịch không có lỗi gì */
+            tenbien.Acdef = "AAA";
+            tenbien.Hello();
 
-            //Cấu trúc dữ liệu Stack: vào sau ra trước
-            Stack<int> stack; 
-
-            //Giải thuật về hàng đợi vào trước được phục vụ trước
-            Queue<double> q;
-
-            
         }
-
     }
+
 }
+
