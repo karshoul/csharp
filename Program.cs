@@ -45,11 +45,11 @@ namespace ns_example
            product.description1 = "Day la Ipad";
 
            Sanpham.Product product1 = new Sanpham.Product(); 
-           product.manufactory.name = "samsung";
-           product.manufactory.addr = "Viet Nam";
-           product.manufactory.description2 = "Day la samsung";
-           product.manufactory = new Sanpham.Product.Manufactory();
-           product.manufactory.name = "Apple";
+           product1.manufactory.name = "samsung";
+           product1.manufactory.addr = "Viet Nam";
+           product1.manufactory.description2 = "Day la samsung";
+           product1.manufactory = new Sanpham.Product.Manufactory();
+           product1.manufactory.name = "Apple";
 
            WriteLine(product.GetInfo1());
            WriteLine(product.manufactory.GetInfo2());
